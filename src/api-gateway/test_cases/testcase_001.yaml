@@ -1,0 +1,66 @@
+---
+schema: "yardstick:services:0.1"
+description: >
+  sample test case 001
+
+senarios:
+  -
+    key: 'senario_1'
+    host: '10.20.0.1'
+    options:
+      key: 'arg_senario_1'
+  -
+    key: 'senario_2'
+    host: '10.20.0.2'
+    options:
+      key: 'arg_senario2'
+  -
+    key: 'senario_3'
+    host: '10.20.0.3'
+    options:
+      key: 'arg_senario_3'
+  -
+    key: 'senario_4'
+    host: '10.20.0.4'
+    options:
+      key: 'arg_sernario_4'
+  -
+    key: 'senario_5'
+    host: '10.20.0.5'
+    options:
+      key: 'arg_senario_5'
+
+
+orchestration:
+  -
+    order: 1
+    description: 'This is a high yardstick-availability benchmarker'
+    service: 'AVAILABILITY'
+    senario_key: "senario_1"
+  -
+    order: 2
+    description: 'This is a Compute benchmarker'
+    service: 'COMPUTE'
+    senario_key: "senario_5"
+
+  -
+    order: 3
+    description: 'This is a yardstick-feature benchmarker'
+    service: 'FEATURE'
+    senario_key: "senario_4"
+
+  -
+    order: 4
+    description: 'This is a yardstick-networking benchmarker'
+    service: 'NETWORKING'
+    senario_key: "senario_3"
+
+  -
+    order: 5
+    description: 'This is a yardstick-storage benchmarker'
+    service: 'STORAGE'
+    senario_key: 'senario_2'
+
+
+
+
