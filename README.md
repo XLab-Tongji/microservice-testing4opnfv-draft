@@ -7,7 +7,9 @@
 
 ## Features
 
-According to the [OPNFV](https://www.opnfv.org/) guide, there are at list 5 projects which are related to testing, they are:
+According to the [OPNFV](https://www.opnfv.org/) guide:"[A Guide to Understanding OPNFV & NFV]
+// (https://www.opnfv.org/resources/download-understanding-opnfv-ebook)",
+// there are at list 5 projects which are related to testing, they are:
 
 - [Bottleneck](https://wiki.opnfv.org/display/bottlenecks)
 - [QTIP](https://wiki.opnfv.org/display/qtip)
