@@ -35,59 +35,62 @@ there are at least 5 projects which are related to testing, they are:
 - [Docker Compose](https://docs.docker.com/compose/)/[Kubernetes](https://kubernetes.io/),the services could be orchestrated with kubenetes or Docker compose
 
 ## Debugging the Project Manually
+
+You could replace the following `AMPQ_URL` with `amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`,which is the public RabbitMQ Service
+
 * run the microservice bottleneck
 
     `cd src/services/bottleneck/`
 
-    `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run bottleneck --broker AMPQ_URL`
 
 * run the microservice QTIP
 
     `cd src/services/qtip/`
 
-    `nameko run qtip --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run qtip --broker AMPQ_URL`
 
 * run the microservice storperf
 
     `cd src/services/storperf/`
 
-    `nameko run storperf --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run storperf --broker AMPQ_URL`
 
 * run the microservice vsperf
 
     `cd src/services/vsperf/`
 
-    `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run bottleneck --broker AMPQ_URL`
 
 * run the microservice yardstick-availability
 
     `cd src/services/yardstick-availability/`
 
-    `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run availability --broker AMPQ_URL`
 
 * run the microservice yardstick-compute
 
     `cd src/services/yardstick-compute/`
 
-    `nameko run compute --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run compute --broker AMPQ_URL`
 
 * run the microservice yardstick-feature
 
     `cd src/services/yardstick-feature/`
 
-    `nameko run feature --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run feature --broker AMPQ_URL`
 
 * run the microservice yardstick-networking
 
     `cd src/services/yardstick-networking/`
 
-    `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run availability --broker AMPQ_URL`
 
 * run the microservice yardstick-storage
 
     `cd src/services/yardstick-storage/`
 
-    `nameko run storage --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+    `nameko run storage --broker AMPQ_URL`
 
 * run the service-gateway
 
