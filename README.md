@@ -32,52 +32,63 @@ According to the OPNFV guide, there are at list 5 projects which are related to 
 
 ## Debugging the project manually
 * run the micorserivce bottleneck
+
     `cd src/services/bottleneck/`
 
     `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce QTIP
+
     `cd src/services/qtip/`
 
     `nameko run qtip --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce storperf
+
     `cd src/services/storperf/`
 
     `nameko run storperf --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce vsperf
+
     `cd src/services/vsperf/`
 
     `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce yardstick-availability
+
     `cd src/services/yardstick-availability/`
 
     `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce yardstick-compute
+
     `cd src/services/yardstick-compute/`
 
     `nameko run compute --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce yardstick-feature
+
     `cd src/services/yardstick-feature/`
 
     `nameko run feature --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce yardstick-networking
+
     `cd src/services/yardstick-networking/`
 
     `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the micorserivce yardstick-storage
+
     `cd src/services/yardstick-storage/`
 
     `nameko run storage --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
 * run the service-gateway
+
     `cd src/api-gateway/`
+
     `python api.py`
 
 ## Support
