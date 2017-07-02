@@ -41,7 +41,6 @@ You could replace the following `AMPQ_URL` with `amqp://xthidnmx:naMqLqyPbJlrtYB
 * run the microservice bottleneck
 
     `cd src/services/bottleneck/`
-
     `nameko run bottleneck --broker AMPQ_URL`
 
 * run the microservice QTIP
