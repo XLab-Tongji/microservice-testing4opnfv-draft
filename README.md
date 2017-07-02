@@ -27,63 +27,63 @@ there are at least 5 projects which are related to testing, they are:
 - [Nameko](https://github.com/nameko/nameko)
 - [JinJia2](http://jinja.pocoo.org/)
 - [Flask](http://flask.pocoo.org/)
-- [RabbitMQ as a Service](https://www.cloudamqp.com/#/).For convenience,we just use a public FREE RabbitMQ service instead of
+- [RabbitMQ as a Service](https://www.cloudamqp.com/#/),for convenience,we just use a public FREE RabbitMQ service instead of
     installing a private rabbitMQ.
     the account of the public service is :`{username:xthidnmx,password:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC}`.
-    if you want to use a private rabbitMQ service,you could also refer to the project [docker_nameko](https://github.com/chunchill/docker-nameko).
+    if you want to use a private RabbitMQ service,you could also refer to the project [docker_nameko](https://github.com/chunchill/docker-nameko).
 - [Docker](https://www.docker.com/),the services are hosted with docker container
 - [Docker Compose](https://docs.docker.com/compose/)/[Kubernetes](https://kubernetes.io/),the services could be orchestrated with kubenetes or Docker compose
 
 ## Debugging the Project Manually
-* run the micorserivce bottleneck
+* run the microservice bottleneck
 
     `cd src/services/bottleneck/`
 
     `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce QTIP
+* run the microservice QTIP
 
     `cd src/services/qtip/`
 
     `nameko run qtip --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce storperf
+* run the microservice storperf
 
     `cd src/services/storperf/`
 
     `nameko run storperf --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce vsperf
+* run the microservice vsperf
 
     `cd src/services/vsperf/`
 
     `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce yardstick-availability
+* run the microservice yardstick-availability
 
     `cd src/services/yardstick-availability/`
 
     `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce yardstick-compute
+* run the microservice yardstick-compute
 
     `cd src/services/yardstick-compute/`
 
     `nameko run compute --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce yardstick-feature
+* run the microservice yardstick-feature
 
     `cd src/services/yardstick-feature/`
 
     `nameko run feature --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce yardstick-networking
+* run the microservice yardstick-networking
 
     `cd src/services/yardstick-networking/`
 
     `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-* run the micorserivce yardstick-storage
+* run the microservice yardstick-storage
 
     `cd src/services/yardstick-storage/`
 
