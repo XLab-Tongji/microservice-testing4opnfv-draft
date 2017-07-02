@@ -25,7 +25,7 @@ there are at least 5 projects which are related to testing, they are:
 We try to design a microservice testing framework with [Domain Driven Design](https://martinfowler.com/tags/domain%20driven%20design.html) philosophy,it will cover the above services.
     The granularity and the context boundary of the micro-services are still topics worthy of dicussion.
 
-    Currently,this project is still in its *draft* and *proposal* stage.
+    Currently,this project is still in its **draft** and **proposal** stage.
 ## Technology Dependency
 
 - Python 2.7,3.0
