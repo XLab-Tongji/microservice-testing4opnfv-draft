@@ -9,7 +9,7 @@
 
 According to the [OPNFV](https://www.opnfv.org/) guide:
 "[A Guide to Understanding OPNFV & NFV](https://www.opnfv.org/resources/download-understanding-opnfv-ebook)",
-there are at list 5 projects which are related to testing, they are:
+there are at least 5 projects which are related to testing, they are:
 
 - [Bottleneck](https://wiki.opnfv.org/display/bottlenecks)
 - [QTIP](https://wiki.opnfv.org/display/qtip)
@@ -21,7 +21,7 @@ there are at list 5 projects which are related to testing, they are:
     - networking
     - storage
     - feature
-## technology dependency
+## Technology Dependency
 
 - Python 2.7,3.0
 - [Nameko](https://github.com/nameko/nameko)
@@ -34,7 +34,7 @@ there are at list 5 projects which are related to testing, they are:
 - [Docker](https://www.docker.com/),the services are hosted with docker container
 - [Docker Compose/Kubernetes](https://kubernetes.io/),the services could be orchestrated with kubenetes or Docker compose
 
-## Debugging the project manually
+## Debugging the Project Manually
 * run the micorserivce bottleneck
 
     `cd src/services/bottleneck/`
