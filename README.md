@@ -3,7 +3,7 @@
 
 ## Architechture
 
-![OPNFV testing framework microservice](https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Untitled%20Diagram.xml#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fchunchill%2FdrawDiagrams%2Fmaster%2Fdiagrams%2FUntitled%2520Diagram.xml)
+![OPNFV testing framework microservice](arch.png)
 
 ## Features
 
