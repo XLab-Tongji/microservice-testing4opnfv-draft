@@ -25,8 +25,10 @@ According to the OPNFV guide, there are at list 5 projects which are related to 
 - [Nameko](https://github.com/nameko/nameko)
 - [JinJia2](http://jinja.pocoo.org/)
 - [Flask](http://flask.pocoo.org/)
-- [RabbitMQ as a Service](https://www.cloudamqp.com/#/) We just use a public rabbitMQ service instead of installing a private rabbitMQ
-    {username:xthidnmx,password:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC}
+- [RabbitMQ as a Service](https://www.cloudamqp.com/#/) We just use a public rabbitMQ service instead of
+// installing a private rabbitMQ
+    {username:xthidnmx,password:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC},if you want to use a private rabbitMQ service,
+    you could also refer to this project [docker_nameko](https://github.com/chunchill/docker-nameko)
 - [Docker](https://www.docker.com/),the services are hosted with docker container
 - [Docker Compose/Kubernetes](https://kubernetes.io/),the services could be orchestrated with kubenetes or Docker compose
 
