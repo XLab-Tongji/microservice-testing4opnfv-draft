@@ -1,5 +1,5 @@
 # microservice-yardstick-draft
-> a microservice project for opnfv testing framework with python full stack technology
+> A microservice project for opnfv testing framework with python full stack technology
 
 ## Architechture
 
@@ -19,20 +19,66 @@ According to the OPNFV guide, there are at list 5 projects which are related to 
     - networking
     - storage
     - feature
+## technology dependency
 
+- Python 2.7,3.0
+- [Nameko](https://github.com/nameko/nameko)
+- [JinJia2](http://jinja.pocoo.org/)
+- [Flask](http://flask.pocoo.org/)
+- [RabbitMQ as a Service](https://www.cloudamqp.com/#/) We just use a public rabbitMQ service instead of installing a private rabbitMQ
+    {username:xthidnmx,password:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC}
+- [Docker](https://www.docker.com/),the services are hosted with docker container
+- [Docker Compose/Kubernetes](https://kubernetes.io/),the services could be orchestrated with kubenetes or Docker compose
 
-`nameko run SERVICE_NAME --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+## Debugging the project manually
+* run the micorserivce bottleneck
+    `cd src/services/bottleneck/`
 
-you could run the following command to testing the RPC service
+    `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-`nameko shell --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+* run the micorserivce QTIP
+    `cd src/services/qtip/`
 
-The RabbitMQ service is provided by : `https://fish.rmq.cloudamqp.com/#/`
+    `nameko run qtip --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
-The services could be deployed with kubernetes:
+* run the micorserivce storperf
+    `cd src/services/storperf/`
 
-`http://blog.apcelent.com/scaling-python-microservices-kubernetes.html`
+    `nameko run storperf --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
 
+* run the micorserivce vsperf
+    `cd src/services/vsperf/`
+
+    `nameko run bottleneck --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+
+* run the micorserivce yardstick-availability
+    `cd src/services/yardstick-availability/`
+
+    `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+
+* run the micorserivce yardstick-compute
+    `cd src/services/yardstick-compute/`
+
+    `nameko run compute --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+
+* run the micorserivce yardstick-feature
+    `cd src/services/yardstick-feature/`
+
+    `nameko run feature --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+
+* run the micorserivce yardstick-networking
+    `cd src/services/yardstick-networking/`
+
+    `nameko run availability --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+
+* run the micorserivce yardstick-storage
+    `cd src/services/yardstick-storage/`
+
+    `nameko run storage --broker amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq.cloudamqp.com/xthidnmx`
+
+* run the service-gateway
+    `cd src/api-gateway/`
+    `python api.py`
 
 ## Support
 
