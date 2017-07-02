@@ -1,0 +1,53 @@
+version: "1"
+services:
+  bottleneck:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  qtip:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  storperf:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  vsperf:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  yardstick-availability:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  yardstick-compute:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  yardstick-feature:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  yardstick-networking:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  yardstick-storage:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+  gateway:
+    container_name: xxx
+    image: xxx
+    ports:
+      - "8002:8000"
+

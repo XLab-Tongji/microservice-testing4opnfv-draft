@@ -8,38 +8,59 @@ senarios:
     key: 'senario_1'
     host: '10.20.0.1'
     options:
-      key: 'arg_senario_1'
+      packetsize: 100
   -
     key: 'senario_2'
     host: '10.20.0.2'
     options:
       key: 'arg_senario2'
+    runner:
+      type: Duration
+      duration: 60
+      interval: 10
+    sla:
+      max_rtt: 10
+      action: monitor
   -
     key: 'senario_3'
     host: '10.20.0.3'
     options:
-      key: 'arg_senario_3'
+      testname: 'UDP_STREAM'
+      send_msg_size: 1024
+      duration: 20
+    runner:
+      type: Iteration
+      iterations: 1
+      interval: 1
   -
     key: 'senario_4'
     host: '10.20.0.4'
     options:
       key: 'arg_sernario_4'
+    runner:
+      type: Iteration
+      iterations: 1
+      interval: 1
   -
     key: 'senario_5'
     host: '10.20.0.5'
     options:
       key: 'arg_senario_5'
+    runner:
+      type: Iteration
+      iterations: 1
+      interval: 1
 
 
 orchestration:
   -
     order: 1
-    description: 'This is a high yardstick-availability benchmarker'
+    description: 'This is a high yardstick-availability benchmarker,Run it with Ping utilities'
     service: 'AVAILABILITY'
     senario_key: "senario_1"
   -
     order: 2
-    description: 'This is a Compute benchmarker'
+    description: 'This is a Compute benchmarker,testing the CPU usage'
     service: 'COMPUTE'
     senario_key: "senario_5"
 
@@ -51,13 +72,13 @@ orchestration:
 
   -
     order: 4
-    description: 'This is a yardstick-networking benchmarker'
+    description: 'This is a yardstick-networking benchmarker,verify the network latency'
     service: 'NETWORKING'
     senario_key: "senario_3"
 
   -
     order: 5
-    description: 'This is a yardstick-storage benchmarker'
+    description: 'This is a yardstick-storage benchmarker,verify the health status for the storage functionalities'
     service: 'STORAGE'
     senario_key: 'senario_2'
 

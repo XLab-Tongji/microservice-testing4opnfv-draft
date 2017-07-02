@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request,render_template
 from service_discovery import ServiceDiscover
 import yaml
 app = Flask(__name__)
@@ -7,7 +7,8 @@ CONFIG = {'AMQP_URI': "amqp://xthidnmx:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC@fish.rmq
 
 @app.route('/index',methods=['GET'])
 def index():
-    return 'hello word', 200
+    results = [{'name':'jasper','age':'10'},{'name':'kim','age':'20'}]
+    return render_template('result.html',people=results), 200
 
 @app.route('/run_001',methods=['GET'])
 def run_test():

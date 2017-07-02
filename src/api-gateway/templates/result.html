@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Report</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<h1>Test Case 001 Result Report</h1>
+
+<p>
+    <strong>Status :</strong><button type="button" class="btn btn-success">Passed</button>
+</p>
+
+<dl style="display: none">
+    {% for user in people if not user.hidden %}
+    <div>
+        <dt>User No. {{ loop.index }}</dt>
+        <dd>{{ user.name }}</dd>
+        <dd>{{ user.age }}</dd>
+
+    </div>
+    {% endfor %}
+</dl>
+
+
+<div class="row">
+
+<div class="col-xs-12 col-md-10">
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Senario #</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Result</th>
+    </tr>
+
+    </thead>
+    <tbody>
+    {%for item in results}
+        <tr class="success">
+            <td>{{item.senario_number}}</td>
+            <td>{{item.senario_type}}</td>
+            <td>{{item.senario_description}}</td>
+            <td>
+                <button type="button" class="btn btn-success">Success</button>
+            </td>
+        </tr>
+    {% endfor%}
+    </tbody>
+
+</table>
+</div>
+</div>
+
+</body>
+</html>
