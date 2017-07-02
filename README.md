@@ -32,7 +32,7 @@ there are at least 5 projects which are related to testing, they are:
     `{username:xthidnmx,password:naMqLqyPbJlrtYBkm-ZTYcdiIpZcwJsC}`,if you want to use a private rabbitMQ service,
     you could also refer to this project [docker_nameko](https://github.com/chunchill/docker-nameko)
 - [Docker](https://www.docker.com/),the services are hosted with docker container
-- [Docker Compose/Kubernetes](https://kubernetes.io/),the services could be orchestrated with kubenetes or Docker compose
+- [Docker Compose](https://docs.docker.com/compose/)/[Kubernetes](https://kubernetes.io/),the services could be orchestrated with kubenetes or Docker compose
 
 ## Debugging the Project Manually
 * run the micorserivce bottleneck
