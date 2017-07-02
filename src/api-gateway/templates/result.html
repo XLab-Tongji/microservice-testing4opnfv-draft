@@ -12,17 +12,6 @@
     <strong>Status :</strong><button type="button" class="btn btn-success">Passed</button>
 </p>
 
-<dl style="display: none">
-    {% for user in people if not user.hidden %}
-    <div>
-        <dt>User No. {{ loop.index }}</dt>
-        <dd>{{ user.name }}</dd>
-        <dd>{{ user.age }}</dd>
-
-    </div>
-    {% endfor %}
-</dl>
-
 
 <div class="row">
 
@@ -38,16 +27,16 @@
 
     </thead>
     <tbody>
-    {%for item in results}
+    {% for item in results %}
         <tr class="success">
             <td>{{item.senario_number}}</td>
-            <td>{{item.senario_type}}</td>
-            <td>{{item.senario_description}}</td>
+            <td>{{item.service}}</td>
+            <td>{{item.description}}</td>
             <td>
-                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-success">{{item.result}}</button>
             </td>
         </tr>
-    {% endfor%}
+    {% endfor %}
     </tbody>
 
 </table>

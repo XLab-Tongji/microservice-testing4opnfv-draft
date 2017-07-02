@@ -5,4 +5,4 @@ class benchmark_compute(object):
 
     @rpc
     def verify(self):
-        return "Run yardstick-compute benchmarking"
+        return "Run yardstick-compute benchmarking successfully"

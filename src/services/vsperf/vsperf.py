@@ -6,4 +6,4 @@ class benchmark_vsperf(object):
 
     @rpc
     def verify(self):
-        return "Run vsperf benchmarking"
+        return "Run vsperf benchmarking successfully"

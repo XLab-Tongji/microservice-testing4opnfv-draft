@@ -10,7 +10,7 @@ def index():
     results = [{'name':'jasper','age':'10'},{'name':'kim','age':'20'}]
     return render_template('result.html',people=results), 200
 
-@app.route('/run_001',methods=['GET'])
+@app.route('/',methods=['GET'])
 def run_test():
     file = open('test_cases/testcase_001.yaml','r')
     test_case = yaml.load(file)
@@ -22,11 +22,13 @@ def run_test():
         service = step['service']
         result = sd.invoke(service)
         results.append({
-            'description':step['description'],
-            'result':result
+            'senario_number': step['senario_key'],
+            'service': step['service'],
+            'description': step['description'],
+            'result': result
         })
-    test_results = output(results)
-    return test_results,200
+    # test_results = output(results)
+    return render_template('result.html', results=results),200
 
 def output(results):
     test_result = ''

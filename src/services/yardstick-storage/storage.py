@@ -6,4 +6,4 @@ class benchmark_storage(object):
 
     @rpc
     def verify(self):
-        return "Run yardstick-storage benchmarking"
+        return "Run yardstick-storage benchmarking successfully"

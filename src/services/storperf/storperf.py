@@ -6,4 +6,4 @@ class benchmark_storperf(object):
 
     @rpc
     def verify(self):
-        return "Run storperf benchmarking"
+        return "Run storperf benchmarking successfully"

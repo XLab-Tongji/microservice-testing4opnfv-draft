@@ -6,4 +6,4 @@ class benchmark_qtip(object):
 
     @rpc
     def verify(self):
-        return "Run qtip benchmarking"
+        return "Run qtip benchmarking successfully"

@@ -5,4 +5,4 @@ class benchmark_feauture(object):
 
     @rpc
     def verify(self):
-        return "Run feautre benchmarking"
+        return "Run feautre benchmarking successfully"

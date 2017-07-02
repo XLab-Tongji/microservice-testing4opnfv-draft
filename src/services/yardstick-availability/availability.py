@@ -5,4 +5,4 @@ class benchmark_ha(object):
 
     @rpc
     def verify(self):
-        return "Run HA benchmarking"
+        return "Run HA benchmarking successfuly"

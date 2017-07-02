@@ -6,4 +6,4 @@ class benchmark_bottleneck(object):
 
     @rpc
     def verify(self):
-        return "Run bottleneck benchmarking"
+        return "Run bottleneck benchmarking successfully"

@@ -7,4 +7,4 @@ class benchmark_networking(object):
 
     @rpc
     def verify(self):
-        return "Run yardstick-networking benchmarking"
+        return "Run yardstick-networking benchmarking successfully"
