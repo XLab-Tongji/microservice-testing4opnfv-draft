@@ -21,7 +21,8 @@ there are at least 5 projects which are related to testing, they are:
     - networking
     - storage
     - feature
-so we try to design a microservice testing framework with Domain Driven Design philosophy,it will cover the above services.
+
+We try to design a microservice testing framework with Domain Driven Design philosophy,it will cover the above services.
     The granularity of the service and the context boundary are still topics worthy of dicussion.
     Currently,this project is still in its draft and proposal stage.
 ## Technology Dependency
