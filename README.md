@@ -1,6 +1,8 @@
 # microservice-testing4opnfv-draft
 > A microservice project for opnfv testing framework with python full stack technology
 
+![](icon.png)
+
 ## Architechture
 
 ![OPNFV testing framework microservice](arch.png)
