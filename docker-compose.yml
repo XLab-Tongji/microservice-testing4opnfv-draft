@@ -1,53 +1,140 @@
 version: "1"
+
 services:
+  rabbit:
+    container_name: benchmaker-rabbitmq
+    image: rabbitmq:3.6-management
+    ports:
+      - "15673:15672" # Exposing RabbitMQ web management on different port for convenience
+    restart: always
+
   bottleneck:
-    container_name: xxx
-    image: xxx
+    container_name: bottleneck
+    image: chunchill/bottleneck-benchmaker
     ports:
-      - "8002:8000"
+      - "8001:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
   qtip:
-    container_name: xxx
-    image: xxx
+    container_name: QTIP
+    image: chunchill/QTIP
     ports:
       - "8002:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
+
   storperf:
-    container_name: xxx
-    image: xxx
+    container_name: storperf-benchmaker
+    image: chunchill/storperf-benchmaker
     ports:
-      - "8002:8000"
+      - "8003:8000"
   vsperf:
-    container_name: xxx
-    image: xxx
+    container_name: vsperf-benchmaker
+    image: chunchill/vsperf-benchmaker
     ports:
-      - "8002:8000"
+      - "8004:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
+
   yardstick-availability:
-    container_name: xxx
-    image: xxx
+    container_name: availability-benchmaker
+    image: chunchill/availability-benchmaker
     ports:
-      - "8002:8000"
+      - "8005:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
+
   yardstick-compute:
-    container_name: xxx
-    image: xxx
+    container_name: compute-benchmaker
+    image: chunchill/compute-benchmaker
     ports:
-      - "8002:8000"
+      - "8006:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
+
   yardstick-feature:
-    container_name: xxx
-    image: xxx
+    container_name: feature-benchmaker
+    image: chunchill/feature-benchmaker
     ports:
-      - "8002:8000"
+      - "8007:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
+
   yardstick-networking:
-    container_name: xxx
-    image: xxx
+    container_name: networking-benchmaker
+    image: chunchill/networking-benchmaker
     ports:
-      - "8002:8000"
+      - "8008:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
+
   yardstick-storage:
-    container_name: xxx
-    image: xxx
+    container_name: storage-benchmaker
+    image: chunchill/storage-benchmaker
     ports:
-      - "8002:8000"
+      - "8009:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
+
   gateway:
-    container_name: xxx
-    image: xxx
+    container_name: gateway-benchmaker
+    image: chunchill/gateway-benchmaker
     ports:
-      - "8002:8000"
+      - "8010:8000"
+    links:
+      - "rabbit:benchmaker-rabbitmq"
+    environment:
+      RABBIT_PASSWORD: "guest"
+      RABBIT_USER: "guest"
+      RABBIT_HOST: "rabbit"
+      RABBIT_PORT: "5672"
+      RABBIT_MANAGEMENT_PORT: "15672"
 
