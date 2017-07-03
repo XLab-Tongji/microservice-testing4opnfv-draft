@@ -1,4 +1,3 @@
-import yagmail
 from nameko.rpc import rpc, RpcProxy
 
 class benchmark_bottleneck(object):
