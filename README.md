@@ -55,57 +55,67 @@ You could replace the following `AMPQ_URL` with `amqp://xthidnmx:naMqLqyPbJlrtYB
 
 * run the microservice QTIP
 
-    `cd src/services/qtip/`
-
-    `nameko run qtip --broker AMPQ_URL`
+    ```
+    $ cd src/services/qtip/
+    $ nameko run qtip --broker AMPQ_URL
+    ```
 
 * run the microservice storperf
 
-    `cd src/services/storperf/`
+    ```
+    $ cd src/services/storperf/
+    $ nameko run storperf --broker AMPQ_URL
+    ```
 
-    `nameko run storperf --broker AMPQ_URL`
 
 * run the microservice vsperf
 
-    `cd src/services/vsperf/`
-
-    `nameko run bottleneck --broker AMPQ_URL`
+    ```
+    $ cd src/services/vsperf/
+    $ nameko run bottleneck --broker AMPQ_URL
+    ```
 
 * run the microservice yardstick-availability
 
-    `cd src/services/yardstick-availability/`
-
-    `nameko run availability --broker AMPQ_URL`
+    ```
+    $ cd src/services/yardstick-availability/
+    $ nameko run availability --broker AMPQ_URL
+    ```
 
 * run the microservice yardstick-compute
 
-    `cd src/services/yardstick-compute/`
-
-    `nameko run compute --broker AMPQ_URL`
+    ```
+    $ cd src/services/yardstick-compute/
+    $ nameko run compute --broker AMPQ_URL
+    ```
 
 * run the microservice yardstick-feature
 
-    `cd src/services/yardstick-feature/`
-
-    `nameko run feature --broker AMPQ_URL`
+    ```
+    $ cd src/services/yardstick-feature/
+    $ nameko run feature --broker AMPQ_URL
+    ```
 
 * run the microservice yardstick-networking
 
-    `cd src/services/yardstick-networking/`
-
-    `nameko run availability --broker AMPQ_URL`
+    ```
+    $ cd src/services/yardstick-networking/
+    $ nameko run availability --broker AMPQ_URL
+    ```
 
 * run the microservice yardstick-storage
 
-    `cd src/services/yardstick-storage/`
-
-    `nameko run storage --broker AMPQ_URL`
+    ```
+    $ cd src/services/yardstick-storage/
+    $ nameko run storage --broker AMPQ_URL
+    ```
 
 * run the service-gateway
 
-    `cd src/api-gateway/`
-
-    `python api.py`
+    ```
+    $ cd src/api-gateway/
+    $ python api.py
+    ```
 
 ## Support
 
