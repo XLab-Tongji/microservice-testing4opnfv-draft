@@ -1,0 +1,55 @@
+---
+schema: "yardstick:services:0.1"
+description: >
+  sample test case 001
+
+senarios:
+  -
+    type: GenernalHA
+    key: 'network-HA'
+    options:
+      test_case_file: “tests/opnfv/test_cases/opnfv_yardstick_tc050.yaml”
+      pod_file: "etc/nodes/compass_sclabe/virtual.yaml"
+  -
+    type: Ping
+    key: 'instance-lantency'
+    options:
+      packetsize: 100
+      target: ares.demo
+    runner:
+      type: Duration
+      duration: 60
+      interval: 10
+    sla:
+      max_rtt: 10
+      action: monitor
+  -
+    type: NetperfNode
+    key: 'node-latency'
+    options:
+      testname: 'UDP_STREAM'
+      send_msg_size: 1024
+      duration: 20
+    runner:
+      type: Iteration
+      iterations: 1
+      interval: 1
+
+orchestration:
+  -
+    order: 1
+    description: 'Network HA testing'
+    service: 'AVAILABILITY'
+    senario_key: "network-HA"
+  -
+    order: 2
+    description: 'Instance network latancy testing'
+    service: 'NETWORKING'
+    senario_key: "instance-lantency"
+
+  -
+    order: 3
+    description: 'Node network latency testing'
+    service: 'NETWORKING'
+    senario_key: "node-latency"
+

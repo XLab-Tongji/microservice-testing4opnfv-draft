@@ -10,11 +10,11 @@ services:
 
   bottleneck:
     container_name: bottleneck
-    image: chunchill/bottleneck-benchmaker
+    image: chunchill/benchmarker-bottleneck
     ports:
       - "8001:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -22,12 +22,12 @@ services:
       RABBIT_PORT: "5672"
       RABBIT_MANAGEMENT_PORT: "15672"
   qtip:
-    container_name: QTIP
-    image: chunchill/QTIP
+    container_name: benchmarker-qtip
+    image: chunchill/benchmarker-qtip
     ports:
       - "8002:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -36,17 +36,17 @@ services:
       RABBIT_MANAGEMENT_PORT: "15672"
 
   storperf:
-    container_name: storperf-benchmaker
-    image: chunchill/storperf-benchmaker
+    container_name: benchmarker-storperf
+    image: chunchill/benchmarker-storperf
     ports:
       - "8003:8000"
   vsperf:
-    container_name: vsperf-benchmaker
-    image: chunchill/vsperf-benchmaker
+    container_name: benchmarker-vsperf
+    image: chunchill/benchmarker-vsperf
     ports:
       - "8004:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -55,12 +55,12 @@ services:
       RABBIT_MANAGEMENT_PORT: "15672"
 
   yardstick-availability:
-    container_name: availability-benchmaker
-    image: chunchill/availability-benchmaker
+    container_name: benchmarker-availability
+    image: chunchill/benchmarker-availability
     ports:
       - "8005:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -69,12 +69,12 @@ services:
       RABBIT_MANAGEMENT_PORT: "15672"
 
   yardstick-compute:
-    container_name: compute-benchmaker
-    image: chunchill/compute-benchmaker
+    container_name: benchmarker-compute
+    image: chunchill/benchmarker-compute
     ports:
       - "8006:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -83,12 +83,12 @@ services:
       RABBIT_MANAGEMENT_PORT: "15672"
 
   yardstick-feature:
-    container_name: feature-benchmaker
-    image: chunchill/feature-benchmaker
+    container_name: benchmarker-feature
+    image: chunchill/benchmarker-feature
     ports:
       - "8007:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -97,12 +97,12 @@ services:
       RABBIT_MANAGEMENT_PORT: "15672"
 
   yardstick-networking:
-    container_name: networking-benchmaker
-    image: chunchill/networking-benchmaker
+    container_name: benchmarker-networking
+    image: chunchill/benchmarker-networking
     ports:
       - "8008:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -111,12 +111,12 @@ services:
       RABBIT_MANAGEMENT_PORT: "15672"
 
   yardstick-storage:
-    container_name: storage-benchmaker
-    image: chunchill/storage-benchmaker
+    container_name: benchmarker-storage
+    image: chunchill/benchmarker-storage
     ports:
       - "8009:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"
@@ -125,12 +125,12 @@ services:
       RABBIT_MANAGEMENT_PORT: "15672"
 
   gateway:
-    container_name: gateway-benchmaker
-    image: chunchill/gateway-benchmaker
+    container_name: benchmarker-gateway
+    image: chunchill/benchmarker-gateway
     ports:
       - "8010:8000"
     links:
-      - "rabbit:benchmaker-rabbitmq"
+      - "rabbit:benchmarker-rabbitmq"
     environment:
       RABBIT_PASSWORD: "guest"
       RABBIT_USER: "guest"

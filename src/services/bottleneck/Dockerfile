@@ -15,7 +15,7 @@ COPY run.sh /var/microservice/run.sh
 RUN chmod +x /var/microservice/run.sh
 
 RUN . /appenv/bin/activate; \
-    pip install --no-index -f wheelhouse bottleneck_benchmarker
+    pip install --no-index -f wheelhouse benchmarker_bottleneck
 
 EXPOSE 8000
 

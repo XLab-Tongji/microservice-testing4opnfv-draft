@@ -7,7 +7,7 @@ run-wheel-builder:
 		microservice-benchmarker-builder;
 
 build-image:
-	docker build -t chunchill/benchmarker-qtip:$(TAG) .;
+	docker build -t chunchill/benchmarker-vsperf:$(TAG) .;
 
 push-image:
-	docker push chunchill/benchmarker-qtip:$(TAG)
+	docker push chunchill/benchmarker-vsperf:$(TAG)
