@@ -1,4 +1,6 @@
-IMAGES :=
+IMAGES := services/bottleneck services/qtip services/storperf services/vsperf services/yardstick-availability \
+services/yardstick-compute services/yardstick-feature services/yardstick-networking services/yardstick-storage \
+api-gateway
 
 build-microservice-base:
 	docker build -t microservice-benchmarker-base -f docker/docker.base .;
